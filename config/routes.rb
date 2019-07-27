@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'article/new2'
-  resource :article, only: [:new]
+  #resource :articles, only: [:new]
   
-  #get 'article/new', to: 'article#new'
+  get 'article/new', to: 'article#new'
+  
+  post 'article/new', to: 'article#create'
+  
+  get 'article', to: 'article#list'
   
 end
